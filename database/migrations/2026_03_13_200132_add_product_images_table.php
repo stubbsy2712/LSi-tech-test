@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::table('products', function (Blueprint $table) {
             $table->renameColumn('image', 'thumbnail');
         });
+		Schema::create('product_images', function (Blueprint $table) {
+			$table->id();
+			$table->string('path');
+			$table->foreignId('product_id')->constrained()->cascadeOnDelete();
+			$table->timestamps();
+		});
     }
 
     /**
@@ -24,5 +30,6 @@ return new class extends Migration
         Schema::table('products', function (Blueprint $table) {
             $table->renameColumn('thumbnail', 'image');
         });
+		Schema::dropIfExists('product_images');
     }
 };
