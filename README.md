@@ -1,13 +1,12 @@
-# LSi Coding Exercise
+# LSi Coding Exercise - completed
 
-## Objectives
+## Work done
 
-- Add a CSS library
-- Add a URL slug for products
-- Allow for multiple images per product
-- Add a product enquiry form which sends an email to a recipient (it doesn't need to send live emails, a preview is fine)
-
-How you achieve these objectives is completely up to you.
+- Added Tailwind for the CSS library, it is not used everywhere, but is noticeable in the new enquiry form
+- Added a URL slug for products in the database
+- Added a new table for multiple images per product, kept the old image so it can be used as a thumbnail. The new images area all displayed on the product page
+- Added a product enquiry form which sends an email, however the .env was set to use `MAIL_MAILER` as `log`, so emails were recorded to `storage/logs/laravel.log`
+- Used SQLite as the database
 
 ## Setting up the project
 
@@ -47,9 +46,3 @@ Configure your database connection in the .env file. For simplicity, you can cre
 ...and, at the same time...
 
 `npm run dev`
-
-## Submitting the project
-
-You do not need to deploy the project anywhere. Simply commit it to your GitHub account and let us know.
-
-Good luck!
