@@ -12,4 +12,9 @@
             @endforeach
         </div>
     @endisset
+	<a href="{{ route('enquiry.form') }}">
+
+		
+		Make an enquiry
+	</a>
 </x-layout>
